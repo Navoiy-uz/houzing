@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Getting Started with Pakhtachi IT Center
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Housing](https://github.com/Navoiy-uz/houzing).
+
+## can see Demo [Housing](https://netlify.com/houzing).
 
 ## Available Scripts
 

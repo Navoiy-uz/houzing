@@ -6,5 +6,4 @@ export const Home = () => {
     <Container>Home</Container>
   )
 }
-
-export default Home
+export default Home;

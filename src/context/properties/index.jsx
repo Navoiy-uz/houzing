@@ -3,9 +3,11 @@ import { createContext } from 'react'
 import { reduser } from '../../components/Properties/reduser'
 
 const PropertiesContext = createContext()
-export const PropertiesProvider = ({children}) => {
-    const [state,dispatch]=useReducer(reduser,[])
+export const PropertiesProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reduser, [])
   return (
-    <PropertiesContext.Provider>{children}</PropertiesContext.Provider>
+    <PropertiesContext.Provider>
+      {children}
+    </PropertiesContext.Provider>
   )
 }

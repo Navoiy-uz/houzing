@@ -1,7 +1,8 @@
 import React from 'react'
-import { Outlet, Navigate, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { Container, Logo, Section, Wrapper,Link } from './style'
 import { navbar } from '../../utils/navbar'
+import Button from '../Generic/Button';
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -14,17 +15,19 @@ export const Home = () => {
         </Section>
         <Section>
           {
-            navbar.map(({ title, path, }, index )=>{
-return(
+            navbar.map(({ title, path, hidden }, index )=>{
+return !hidden && (
   <Link className={({isActive})=>isActive&&'active'} key={index} to={path}>{title}</Link>
 )
             })
           }
         </Section>
-        <Section><button>login</button></Section>
+        <Section>
+          <Button type='dark' onClick={()=> navigate('/singIn')}>Login</Button>
+        </Section>
       </Wrapper>
         <Outlet />
     </Container>
   )
 }
-export default Home;
+export default Home

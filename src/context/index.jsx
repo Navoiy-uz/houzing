@@ -13,4 +13,4 @@ export const RootContext = ({ children }) => {
   )
 }
 
-export default RootContext;
+export default RootContext

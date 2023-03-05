@@ -28,16 +28,28 @@ const getType = ({type}) => {
 
 
 export const Container = styled.input`
-width: ${({ width }) => width ? `${width}px` : '200px'};
+width: ${({ width }) => width ? `${width}px` : '100%'};
 height: ${({ height }) => height ? `${height}px` : '44px'};
 /* display: flex;
 align-items: center;
 justify-content: center; */
 outline: none;
-padding-left: 10px;
+padding-left: ${({icon})=>icon ? '30px': '10px'};
 border: 1px solid #e6e9ec;
 border-radius: 2px;
 /* cursor: pointer; */
 font-size: ${({fontSize})=>fontSize ? `${fontSize}px` : '14px'};
 /* ${getType} */
+`
+
+export const Wrapper = styled.div`
+width: 100%;
+display: flex;
+align-items: center;
+position: relative;
+`
+
+export const Icon = styled.div`
+position: absolute;
+margin-left: 5px;
 `

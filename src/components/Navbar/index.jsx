@@ -3,6 +3,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import { Container, Logo, Section, Wrapper,Link } from './style'
 import { navbar } from '../../utils/navbar'
 import Button from '../Generic/Button';
+import Filter from '../Filter';
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -26,7 +27,8 @@ return !hidden && (
           <Button type='dark' onClick={()=> navigate('/singIn')}>Login</Button>
         </Section>
       </Wrapper>
-        <Outlet />
+      <Filter/>
+        <Outlet/>
     </Container>
   )
 }

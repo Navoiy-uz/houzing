@@ -4,6 +4,8 @@ import { Container, Logo, Section, Wrapper,Link } from './style'
 import { navbar } from '../../utils/navbar'
 import Button from '../Generic/Button';
 import Filter from '../Filter';
+import CarouselCard from '../Carousel';
+
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -28,6 +30,7 @@ return !hidden && (
         </Section>
       </Wrapper>
       <Filter/>
+      <CarouselCard/>
         <Outlet/>
     </Container>
   )

@@ -1,5 +1,5 @@
 import { Dropdown } from 'antd'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Button, Input } from '../Generic'
 import { Container, Icon, Section, Wrapper } from './style'
 
@@ -15,6 +15,11 @@ export const Filter = () => {
   const sortRef = useRef()
   const minPriceRef = useRef()
   const maxPriceRef = useRef()
+
+  const [open,setOpen]=useState(false)
+  const onOpenChange=()=>{
+    setOpen(!open)
+  }
   
   const items = [
     {
@@ -49,7 +54,7 @@ export const Filter = () => {
     <Container>
       
       <Input Icons={<Icon.Home/>} icon placeholder='Enter an adress, neighborhood, city, or ZIP code'/>
-      <Dropdown menu={{items}} placement="bottomRight" arrow>
+      <Dropdown onOpenChange={onOpenChange} open={open} menu={{items}} placement="bottomRight" arrow>
         <div>
 
       <Button  type='light'> <Icon.Setting/> Advanced</Button>

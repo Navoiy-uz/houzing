@@ -22,6 +22,7 @@ const Input = forwardRef(({
         type={type} 
         value={value}
         defaultValue={defaultValue}
+        ref={ref}
         name={name}
         height={height} 
         width={width}
